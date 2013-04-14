@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <drawable name="white">#FFFFFF</drawable>
+  <drawable name="black">#000000</drawable>
+  <drawable name="blue">#0000FF</drawable>
+  <drawable name="mi">#FEFFF5</drawable>
+  <drawable name="sblue">#315EAA</drawable>
+  <drawable name="mblue">#3C70BC</drawable>
+  <drawable name="brown">#D7D7D7</drawable>
+  <drawable name="green">#23638E</drawable>
+  <drawable name="grey">#999999</drawable>
+  <drawable name="devicetimecolor">#99cc33</drawable>
+  
+  <color name="grid_color">#CFCFCF</color>
+   
+   <drawable name="aaaa">#F5F8FD</drawable>
+   <drawable name="DarkOrange">#FF9900</drawable>
+   <color name="LabelsColor">#989898</color>
+   
+   <color name="LightBlackColor_ChartLayout">#4A4A4A</color>
+   <color name="LightBlackColor">#5C5C5C</color>
+   
+
+  <color name="black_test">#000000</color>
+</resources>
