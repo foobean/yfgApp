@@ -28,14 +28,14 @@ public class ViewPagerFragmentDemo extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		 View v = inflater.inflate(R.layout.view_pager_fragment_demo, container, false);
-	     listView = (ListView)v.findViewById(R.id.statusListView);
+	    /* listView = (ListView)v.findViewById(R.id.statusListView);
 	        
 	        
 	     listItems = new LinkedList<String>();
 	     listItems.addAll(Arrays.asList(mStrings));
 	     ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
 	                                                                listItems);
-	     listView.setAdapter(adapter);
+	     listView.setAdapter(adapter);*/
 
 	     return v;
 	}

@@ -5,6 +5,7 @@ import java.util.List;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.ListFragment;
 
 
 /**
@@ -16,11 +17,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class ViewPagerIndicatorAdpter extends FragmentPagerAdapter{
 
 	
-	 private List<Fragment> fragmentList;
+	 private List<ListFragment> fragmentList;
      private List<String>   titleList;
 
      
-	public ViewPagerIndicatorAdpter(FragmentManager fm,List<Fragment> fragmentList, List<String> titleList) {
+	public ViewPagerIndicatorAdpter(FragmentManager fm,List<ListFragment> fragmentList, List<String> titleList) {
 		super(fm);
 		 this.fragmentList = fragmentList;
          this.titleList = titleList;

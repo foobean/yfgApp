@@ -11,6 +11,7 @@ import com.yfg.app.fragment.adapter.ViewPagerIndicatorAdpter;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,18 +33,18 @@ public class ViewPagerIndicatorFragment extends Fragment{
 	private View contextView = null;
 	private ViewPager pager = null;
 	private ViewPagerIndicatorAdpter myAdapter = null;
-	private List<Fragment> fragmentList = new ArrayList<Fragment>();
+	private List<ListFragment> fragmentList = new ArrayList<ListFragment>();
 	private List<String>   titleList    = new ArrayList<String>();
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		fragmentList.add(new ViewPagerFragmentDemo());
-        fragmentList.add(new ViewPagerFragmentDemo());
-        fragmentList.add(new ViewPagerFragmentDemo());
-        fragmentList.add(new ViewPagerFragmentDemo());
-        fragmentList.add(new ViewPagerFragmentDemo());
+		fragmentList.add(new ViewPagerFragmentListDemo());
+        fragmentList.add(new ViewPagerFragmentListDemo());
+        fragmentList.add(new ViewPagerFragmentListDemo());
+        fragmentList.add(new ViewPagerFragmentListDemo());
+        fragmentList.add(new ViewPagerFragmentListDemo());
         titleList.add("title 1 ");
         titleList.add("title 2 ");
         titleList.add("title 3 ");
