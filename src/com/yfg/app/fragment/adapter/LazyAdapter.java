@@ -39,8 +39,17 @@ public class LazyAdapter extends BaseAdapter {
 		imageLoader = new ImageLoader(activity.getApplicationContext());
 	}
 
+	public LazyAdapter(Activity a, ArrayList<HashMap<String, String>> d,int count) {
+		activity = a;
+		inflater = (LayoutInflater) activity
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		imageLoader = new ImageLoader(activity.getApplicationContext());
+	}
+
+	
 	public int getCount() {
 		return data.size();
+		
 	}
 
 	public Object getItem(int position) {

@@ -2,6 +2,8 @@ package com.yfg.app.fragment.adapter;
 
 import java.util.List;
 
+import com.yfg.app.fragment.ViewPagerFragmentNewsList;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -22,16 +24,19 @@ public class ViewPagerIndicatorAdpter extends FragmentPagerAdapter{
 
      
 	public ViewPagerIndicatorAdpter(FragmentManager fm,List<ListFragment> fragmentList, List<String> titleList) {
-		super(fm);
+		 super(fm);
 		 this.fragmentList = fragmentList;
          this.titleList = titleList;
 	}
 
 	  @Override
-      public Fragment getItem(int arg0) {
-          return (fragmentList == null || fragmentList.size() == 0) ? null : fragmentList.get(arg0);
+      public Fragment getItem(int position) {
+		  fragmentList.add(new ViewPagerFragmentNewsList(position));
+          return (fragmentList == null || fragmentList.size() == 0) ? null : fragmentList.get(position);
       }
-
+	  
+	  
+	  
       @Override
       public CharSequence getPageTitle(int position) {
           return (titleList.size() > position) ? titleList.get(position) : "";
@@ -39,7 +44,7 @@ public class ViewPagerIndicatorAdpter extends FragmentPagerAdapter{
 
       @Override
       public int getCount() {
-          return fragmentList == null ? 0 : fragmentList.size();
+          return titleList == null ? 0 : titleList.size();
       }
 
 }

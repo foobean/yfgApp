@@ -39,12 +39,11 @@ public class ViewPagerIndicatorFragment extends Fragment{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		fragmentList.add(new ViewPagerFragmentListDemo());
-        fragmentList.add(new ViewPagerFragmentListDemo());
-        fragmentList.add(new ViewPagerFragmentListDemo());
-        fragmentList.add(new ViewPagerFragmentListDemo());
-        fragmentList.add(new ViewPagerFragmentListDemo());
+		fragmentList.add(new ViewPagerFragmentNewsList(0));
+     /*   fragmentList.add(new ViewPagerFragmentNewsList());
+        fragmentList.add(new ViewPagerFragmentNewsList());
+        fragmentList.add(new ViewPagerFragmentNewsList());
+        fragmentList.add(new ViewPagerFragmentNewsList());*/
         titleList.add("title 1 ");
         titleList.add("title 2 ");
         titleList.add("title 3 ");

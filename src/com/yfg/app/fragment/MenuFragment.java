@@ -3,7 +3,6 @@ package com.yfg.app.fragment;
 import com.slidingmenu.lib2.SlidingMenu;
 import com.yfg.app.activity.HomeActivity;
 import com.yfg.app.activity.R;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,7 +14,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-
 /**
  *  main ui menu
  *  
