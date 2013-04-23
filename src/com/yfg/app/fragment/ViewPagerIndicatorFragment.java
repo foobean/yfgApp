@@ -8,6 +8,8 @@ import com.viewpagerindicator.TabPageIndicator;
 import com.yfg.app.activity.HomeActivity;
 import com.yfg.app.activity.R;
 import com.yfg.app.fragment.adapter.ViewPagerIndicatorAdpter;
+import com.yfg.app.fragment.data.BankApp;
+import com.yfg.app.fragment.model.NewLm;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -39,16 +41,26 @@ public class ViewPagerIndicatorFragment extends Fragment{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		fragmentList.add(new ViewPagerFragmentNewsList(0));
+		fragmentList.add(new ViewPagerFragmentListDemo());
      /*   fragmentList.add(new ViewPagerFragmentNewsList());
         fragmentList.add(new ViewPagerFragmentNewsList());
         fragmentList.add(new ViewPagerFragmentNewsList());
         fragmentList.add(new ViewPagerFragmentNewsList());*/
-        titleList.add("title 1 ");
+		
+		/*titleList.add("title 1 ");
         titleList.add("title 2 ");
         titleList.add("title 3 ");
         titleList.add("title 4 ");
-        titleList.add("title 5 ");
+        titleList.add("title 5 ");*/
+		
+		ArrayList<NewLm> allLm = BankApp.dataService.parserNewLmResponse();
+		if(allLm != null && allLm.size() >0){
+			for(int i = 0 ; i < allLm.size(); i++){
+				NewLm lm = allLm.get(i);
+				titleList.add(lm.classname);
+			}
+		}
+        
         //Log.e("onCreate  myAdapter", myAdapter.getCount()+"");
 		myAdapter = new ViewPagerIndicatorAdpter(getFragmentManager(), fragmentList, titleList);
 		
