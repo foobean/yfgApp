@@ -41,7 +41,11 @@ public class ViewPagerIndicatorFragment extends Fragment{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		/*fragmentList.add(new ViewPagerFragmentListDemo());
 		fragmentList.add(new ViewPagerFragmentListDemo());
+		fragmentList.add(new ViewPagerFragmentListDemo());
+		fragmentList.add(new ViewPagerFragmentListDemo());
+		fragmentList.add(new ViewPagerFragmentListDemo());*/
      /*   fragmentList.add(new ViewPagerFragmentNewsList());
         fragmentList.add(new ViewPagerFragmentNewsList());
         fragmentList.add(new ViewPagerFragmentNewsList());
@@ -51,19 +55,18 @@ public class ViewPagerIndicatorFragment extends Fragment{
         titleList.add("title 2 ");
         titleList.add("title 3 ");
         titleList.add("title 4 ");
-        titleList.add("title 5 ");*/
+        titleList.add("title 5 ");	*/	
 		
 		ArrayList<NewLm> allLm = BankApp.dataService.parserNewLmResponse();
 		if(allLm != null && allLm.size() >0){
 			for(int i = 0 ; i < allLm.size(); i++){
 				NewLm lm = allLm.get(i);
-				titleList.add(lm.classname);
+				titleList.add(lm.classname.trim());
+				fragmentList.add(new ViewPagerFragmentListDemo());
 			}
 		}
-        
-        //Log.e("onCreate  myAdapter", myAdapter.getCount()+"");
-		myAdapter = new ViewPagerIndicatorAdpter(getFragmentManager(), fragmentList, titleList);
 		
+		myAdapter = new ViewPagerIndicatorAdpter(getFragmentManager(), fragmentList, titleList);
 		mMain = (HomeActivity) getActivity();
 	}
 

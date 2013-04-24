@@ -30,7 +30,7 @@ import com.yfg.app.fragment.adapter.LazyAdapter;
 import com.yfg.app.utils.XMLParser;
 
 @SuppressLint("ValidFragment")
-public class ViewPagerFragmentNewsList  extends ListFragment{
+public class ViewPagerHeadNewsList  extends ListFragment{
     private ListView listView  = null;
     // URL
   	//public static final String URL = "http://api.androidhive.info/music/music.xml";//xml
@@ -57,9 +57,9 @@ public class ViewPagerFragmentNewsList  extends ListFragment{
 	}
 	
 	
-	public ViewPagerFragmentNewsList(){}
+	public ViewPagerHeadNewsList(){}
 	
-	public ViewPagerFragmentNewsList(int position){
+	public ViewPagerHeadNewsList(int position){
 		URL += "?id="+ String.valueOf(position);
 	}
 	

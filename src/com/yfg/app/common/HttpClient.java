@@ -45,7 +45,7 @@ public final class HttpClient {
 			Log.d("","-----response code-----" + code);
 			if (code == HttpURLConnection.HTTP_OK || code == 400) {
 				ins = (InputStream)conn.getInputStream();
-				return readInputStream(ins);
+				return readInputStreams(ins);
 			}
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
@@ -55,6 +55,35 @@ public final class HttpClient {
 			}
 		}
 		return null;
+	}
+	/**
+	 *  
+	 *   read inputStream
+	 * 
+	 * */
+	private String readInputStreams(InputStream ins){
+		BufferedReader br = new BufferedReader(new InputStreamReader(ins));
+		StringBuffer sb = new StringBuffer();
+		int count = 1024;
+		int result = -1;
+		char[] readChars = new char[count];
+		String temp = null;
+		try {
+			do {
+				result = br.read(readChars, 0, count);
+
+				if (result > 0) {
+					temp = new String(readChars, 0, result);
+					sb.append(temp);
+				}
+			} while (result != -1);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return sb.toString();
+		
+	   
 	}
 
 	/**

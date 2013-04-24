@@ -27,8 +27,8 @@ public class HomeActivity extends SlidingFragmentActivity implements OnClickList
 		 // set the Behind View
         setBehindContentView(R.layout.home_frame_menu);
         
-        TextView iconTitle = (TextView) this.findViewById(R.id.icon_title);
-        iconTitle.setOnClickListener(this);
+       // TextView iconTitle = (TextView) this.findViewById(R.id.icon_title);
+       // iconTitle.setOnClickListener(this); //去除menu
         initMenuShowContent();
         initSlidingMenu();
 	}

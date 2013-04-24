@@ -2,7 +2,7 @@ package com.yfg.app.fragment.adapter;
 
 import java.util.List;
 
-import com.yfg.app.fragment.ViewPagerFragmentNewsList;
+import com.yfg.app.fragment.ViewPagerHeadNewsList;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -31,7 +31,7 @@ public class ViewPagerIndicatorAdpter extends FragmentPagerAdapter{
 
 	  @Override
       public Fragment getItem(int position) {
-		  fragmentList.add(new ViewPagerFragmentNewsList(position));
+		  fragmentList.add(new ViewPagerHeadNewsList(position));
           return (fragmentList == null || fragmentList.size() == 0) ? null : fragmentList.get(position);
       }
 	  

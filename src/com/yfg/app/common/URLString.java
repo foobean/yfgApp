@@ -11,7 +11,8 @@ package com.yfg.app.common;
 public final class URLString {
 	
 	//
-	public static final String BASE_URL = "http://www.infocio.cn/e/extend/yfg/";
+	//public static final String BASE_URL = "http://www.infocio.cn/e/extend/yfg/";
+	public static final String BASE_URL = "http://yjbg.org/e/extend/yfg/";
 	
 	
 	/**
