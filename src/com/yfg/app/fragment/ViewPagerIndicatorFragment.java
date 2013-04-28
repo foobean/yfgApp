@@ -18,6 +18,7 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 
@@ -62,7 +63,7 @@ public class ViewPagerIndicatorFragment extends Fragment{
 			for(int i = 0 ; i < allLm.size(); i++){
 				NewLm lm = allLm.get(i);
 				titleList.add(lm.classname.trim());
-				fragmentList.add(new ViewPagerFragmentListDemo());
+				fragmentList.add(ViewPagerGeneralNewsList.newInstance(lm.classid));
 			}
 		}
 		
@@ -76,18 +77,19 @@ public class ViewPagerIndicatorFragment extends Fragment{
 		contextView = inflater.inflate(R.layout.simple_tabs, container, false);
 		pager = (ViewPager) contextView.findViewById(R.id.pager);
 		
-		 //Log.e("onCreateView  myAdapter", myAdapter.getCount()+"");
-		//pager.setAdapter(adapter);
+		//myAdapter.notifyDataSetChanged();
 		pager.setAdapter(myAdapter);
+
 		
 		indicator = (TabPageIndicator) contextView.findViewById(R.id.indicator);
 		indicator.setViewPager(pager);
-		indicator.setOnPageChangeListener(onPageChangeListener);
+		
+		//indicator.setOnPageChangeListener(onPageChangeListener);
 		return contextView;
 	}
 
 	
-	ViewPager.SimpleOnPageChangeListener onPageChangeListener = new ViewPager.SimpleOnPageChangeListener(){
+	/*ViewPager.SimpleOnPageChangeListener onPageChangeListener = new ViewPager.SimpleOnPageChangeListener(){
 		
 		@Override
         public void onPageSelected(int position) {
@@ -100,6 +102,6 @@ public class ViewPagerIndicatorFragment extends Fragment{
                     break;
             }
         }
-	};
+	};*/
 	
 }

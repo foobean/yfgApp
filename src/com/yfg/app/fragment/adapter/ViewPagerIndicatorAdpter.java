@@ -1,6 +1,7 @@
 package com.yfg.app.fragment.adapter;
 
 import java.util.List;
+import java.util.TreeSet;
 
 import com.yfg.app.fragment.ViewPagerHeadNewsList;
 
@@ -31,7 +32,7 @@ public class ViewPagerIndicatorAdpter extends FragmentPagerAdapter{
 
 	  @Override
       public Fragment getItem(int position) {
-		  fragmentList.add(new ViewPagerHeadNewsList(position));
+		  //fragmentList.add(new ViewPagerHeadNewsList(position));
           return (fragmentList == null || fragmentList.size() == 0) ? null : fragmentList.get(position);
       }
 	  

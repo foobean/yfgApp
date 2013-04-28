@@ -51,11 +51,11 @@ public class ViewPagerTitleFragment extends Fragment {
 		
 		indicator = (TabPageIndicator) contextView.findViewById(R.id.indicator);
 		indicator.setViewPager(pager);
-		indicator.setOnPageChangeListener(onPageChangeListener);
+		//indicator.setOnPageChangeListener(onPageChangeListener);
 		return contextView;
 	}
 
-	
+	/*
 	ViewPager.SimpleOnPageChangeListener onPageChangeListener = new ViewPager.SimpleOnPageChangeListener(){
 		
 		@Override
@@ -69,6 +69,6 @@ public class ViewPagerTitleFragment extends Fragment {
                     break;
             }
         }
-	};
+	};*/
 	
 }

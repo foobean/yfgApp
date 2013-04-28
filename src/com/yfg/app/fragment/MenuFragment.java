@@ -54,7 +54,7 @@ public class MenuFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		
-		switch (v.getId()) {
+		/*switch (v.getId()) {
 		case R.id.listMenu_1:
 			if (index == 1) {
 				mActivity.getSlidingMenu().toggle();
@@ -96,7 +96,7 @@ public class MenuFragment extends Fragment implements OnClickListener {
 		default:
 			break;
 		}
-		mActivity.getSlidingMenu().toggle();
+		mActivity.getSlidingMenu().toggle();*/
 	}
 
 }
